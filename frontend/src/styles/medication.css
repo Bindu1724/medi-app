@@ -1,0 +1,23 @@
+.medication-page {
+  padding: 20px;
+}
+
+.medication-page h2 {
+  color: #007bff;
+}
+
+.medication-page form {
+  margin-bottom: 20px;
+}
+
+.medication-page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.medication-page li {
+  background: #e9ecef;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+}

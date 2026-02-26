@@ -1,0 +1,14 @@
+.patient-page {
+  padding: 20px;
+}
+
+.patient-page h2 {
+  color: #17a2b8;
+}
+
+.patient-page p {
+  font-size: 16px;
+  background: #f1f3f5;
+  padding: 10px;
+  border-radius: 4px;
+}
