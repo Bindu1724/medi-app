@@ -2,21 +2,20 @@
 A full‑stack MERN application built to solve real‑world healthcare challenges: helping patients and caretakers track medication schedules, adherence, and reminders. This project demonstrates my ability to design, debug, and deliver production‑ready apps with polished UI and maintainable backend logic.
 
 # 🚀 Key Features
-- Authentication & Role Management
+- Authentication & Role Management:
 Secure login for patients and caretakers, with role-based dashboards.
-- Medication Scheduling
+- Medication Scheduling:
 Add, edit, and delete medications with dosage, frequency, and timing.
-- Adherence Tracking
-Automatic calculation of:
-- Streaks (days of consistent intake)
-- Missed doses this month
-- Taken doses this week
-- Overall adherence rate
-- Caretaker Dashboard
-Caretakers can monitor patient adherence, streaks, and missed doses in real time.
-- Email Reminders
+- Automatic calculation of:
+    Streaks (days of consistent intake)
+    Missed doses this month
+    Taken doses this week
+    Overall adherence rate
+    Caretaker Dashboard
+- Caretakers can monitor patient adherence, streaks, and missed doses in real time.
+- Email Reminders:
 Integrated with Nodemailer (adaptable to providers like SendGrid/Mailgun) for reliable medication reminders.
-- Responsive UI
+- Responsive UI:
 Built with React and Bootstrap for a clean, professional interface.
 
 
