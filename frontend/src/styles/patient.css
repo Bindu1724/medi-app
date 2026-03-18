@@ -1,14 +1,14 @@
-.patient-page {
-  padding: 20px;
+
+.greet-item {
+  margin: 5px 0;
+  padding: 5px 0;
+  color: #27853d;
+  font-weight: 600;
+  text-align: center;
 }
 
-.patient-page h2 {
-  color: #17a2b8;
-}
-
-.patient-page p {
-  font-size: 16px;
-  background: #f1f3f5;
-  padding: 10px;
-  border-radius: 4px;
+.stats-item {
+  margin: 0;
+  color: #27853d;
+  font-weight: 600;
 }

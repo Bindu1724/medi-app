@@ -1,7 +1,7 @@
 // src/services/api.js
-const API_BASE = "http://localhost:5000/api"; // change to your deployed backend later
+const API_BASE = "http://localhost:5000/api"; // 
 
-export async function apiRequest(endpoint, method = "GET", body = null, token = null) {
+export async function apiRequest(endpoint, method = "POST", body = null, token = null) {
   const headers = { "Content-Type": "application/json" };
   if (token) headers["Authorization"] = `Bearer ${token}`;
 

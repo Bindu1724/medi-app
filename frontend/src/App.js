@@ -1,30 +1,55 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
-import MedicationPage from './pages/MedicationPage';
-import PatientPage from './pages/PatientPage';
-import CaretakerPage from './pages/CaretakerPage';
-import OverviewPage from './pages/OverviewPage';
-import MonthlyAdherence from './pages/MonthlyAdherence';
-import RecentActivity from './pages/RecentActivity';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './pages/Login.js';
+import Register from './pages/Register';
+import PatientDashboard from './components/PatientDashboard.js';
+import CaretakerDashboard from './components/CaretakerDashboard';
+import HomePage from './components/homePage.js';
+import Notification from "./components/notification.js";
+import CalendarView from "./components/CalenderView.js";
+import { useLocation } from "react-router-dom";
+
+
+function NotificationPage() {
+  const location = useLocation();
+  const { patientName, patientGender, adherenceRate, streak, medications } = location.state || {};
+
+  return (
+    <Notification
+      patientName={patientName}
+      patientGender={patientGender}
+      adherenceRate={adherenceRate}
+      streak={streak}
+      medications={medications}
+    />
+  );
+}
+
+function CalendarPage() {
+  const location = useLocation();
+  const { patientId } = location.state || {};
+
+  return (
+    <CalendarView patientId={patientId} />
+  );
+}
+
+
 
 function App() {
   return (
     <Router>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/medications" element={<MedicationPage />} />
-        <Route path="/patient" element={<PatientPage />} />
-        <Route path="/caretaker" element={<CaretakerPage />} />
-        <Route path="/overview" element={<OverviewPage />} />
-        <Route path="/monthly" element={<MonthlyAdherence />} />
-        <Route path="/recent" element={<RecentActivity />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/caretaker/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/patient/login" element={<Login />} />
+        <Route path="/patient-dashboard" element={<PatientDashboard />} />
+        <Route path="/caretaker-dashboard" element={<CaretakerDashboard />} />
+        <Route path="/caretaker-dashboard/notifications" element={<NotificationPage />} />
+        <Route path="/caretaker-dashboard/calendar" element={<CalendarPage />} />
+
       </Routes>
-      <Footer />
     </Router>
   );
 }

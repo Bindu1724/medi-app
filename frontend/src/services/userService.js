@@ -1,10 +1,14 @@
 // src/services/userService.js
-import { apiRequest } from "./api";
 
-export async function registerUser(userData) {
-  return apiRequest("/users/register", "POST", userData);
+
+import {apiRequest} from './api';
+
+export async function login(email, password, role) {
+  const response = await apiRequest("/users/login", "POST", { email, password, role });
+  return response;
 }
 
-export async function loginUser(credentials) {
-  return apiRequest("/users/login", "POST", credentials);
+export async function registerUser(userData) {
+  const response = await apiRequest("/users/register", "POST", userData);
+  return response;
 }

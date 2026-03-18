@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+##🩺 Medication Management App
+A full‑stack MERN application built to solve real‑world healthcare challenges: helping patients and caretakers track medication schedules, adherence, and reminders. This project demonstrates my ability to design, debug, and deliver production‑ready apps with polished UI and maintainable backend logic.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#🚀 Key Features
+- Authentication & Role Management
+Secure login for patients and caretakers, with role-based dashboards.
+- Medication Scheduling
+Add, edit, and delete medications with dosage, frequency, and timing.
+- Adherence Tracking
+Automatic calculation of:
+- Streaks (days of consistent intake)
+- Missed doses this month
+- Taken doses this week
+- Overall adherence rate
+- Caretaker Dashboard
+Caretakers can monitor patient adherence, streaks, and missed doses in real time.
+- Email Reminders
+Integrated with Nodemailer (adaptable to providers like SendGrid/Mailgun) for reliable medication reminders.
+- Responsive UI
+Built with React and Bootstrap for a clean, professional interface.
 
-## Available Scripts
 
-In the project directory, you can run:
+📂 Project Structure
+/medication-app
+  ├── backend
+  │   ├── models        # MongoDB schemas
+  │   ├── routes        # Express routes
+  │   └── utils         # Helper functions (adherence, streaks, etc.)
+  ├── frontend
+  │   ├── components    # Reusable UI components
+  │   ├── pages         # Dashboard, Login, Calendar
+  │   └── styles        # Bootstrap + custom CSS
+  └── README.md
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+⚙️ Installation & Setup
+- Clone the repository
+git clone https://github.com/yourusername/medication-app.git
+cd medication-app
+- Install dependencies
+npm install
+cd frontend && npm install
+- Configure environment variables Create a .env file in the backend with:
+MONGO_URI=your_mongodb_connection
+EMAIL_SERVICE=your_email_provider
+EMAIL_USER=your_email_username
+EMAIL_PASS=your_email_password
+- Run the app
+# Start backend
+npm run server
 
-### `npm test`
+# Start frontend
+cd frontend
+npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🧩 My Contributions
+- Designed MongoDB schemas and Express routes for medication tracking.
+- Implemented backend logic for adherence metrics and streak consistency across dashboards.
+- Debugged integration issues (userId mismatches, badge color inconsistencies).
+- Refactored code for maintainability and scalability.
+- Focused on UI polish: centered calendar, reusable CSS, and professional layouts.
 
-### `npm run build`
+📸 Demo Highlights
+- Patient Dashboard: shows streaks, adherence, and reminders.
+- Caretaker Dashboard: monitors multiple patients with real‑time updates.
+- Medication Calendar: clean, centered, and responsive.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👩‍💻 Author
+Developed by Bindu — aspiring full-stack developer passionate about building scalable, user-friendly healthcare solutions.
