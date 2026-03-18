@@ -18,7 +18,7 @@ function CalendarView({ patientId }) {
       try {
         if (!patientId) return;
         const res = await axios.get(
-          `http://localhost:5000/api/medications?userId=${patientId}`,
+          `https://medi-app-1ujt.onrender.com/medications?userId=${patientId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setMedications(res.data || []);

@@ -25,7 +25,7 @@ function Overview({patientId, patientName, patientGender }) {
       try {
         if (!patientId) return; // ✅ only fetch when patient selected
         const token = localStorage.getItem('token');
-        const res = await axios.get(`http://localhost:5000/api/medications?userId=${patientId}`, {
+        const res = await axios.get(`https://medi-app-1ujt.onrender.com/medications?userId=${patientId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         const data = res.data;
@@ -126,7 +126,7 @@ function Overview({patientId, patientName, patientGender }) {
                   onClick={async () => {
                   try {
                       const caretakerEmail = "caretaker@example.com"; // or from state
-                        await axios.post("http://localhost:5000/api/notifications/send-reminder",
+                        await axios.post("https://medi-app-1ujt.onrender.com/notifications/send-reminder",
                               { caretakerEmail, patientName },
                               { headers: { Authorization: `Bearer ${token}` } }
                         );
