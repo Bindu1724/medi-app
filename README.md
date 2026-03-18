@@ -1,7 +1,7 @@
-##🩺 Medication Management App
+# 🩺 Medication Management App
 A full‑stack MERN application built to solve real‑world healthcare challenges: helping patients and caretakers track medication schedules, adherence, and reminders. This project demonstrates my ability to design, debug, and deliver production‑ready apps with polished UI and maintainable backend logic.
 
-#🚀 Key Features
+# 🚀 Key Features
 - Authentication & Role Management
 Secure login for patients and caretakers, with role-based dashboards.
 - Medication Scheduling
@@ -20,7 +20,7 @@ Integrated with Nodemailer (adaptable to providers like SendGrid/Mailgun) for re
 Built with React and Bootstrap for a clean, professional interface.
 
 
-📂 Project Structure
+# 📂 Project Structure
 /medication-app
   ├── backend
   │   ├── models        # MongoDB schemas
@@ -34,7 +34,7 @@ Built with React and Bootstrap for a clean, professional interface.
 
 
 
-⚙️ Installation & Setup
+# ⚙️ Installation & Setup
 - Clone the repository
 git clone https://github.com/yourusername/medication-app.git
 cd medication-app
@@ -54,17 +54,17 @@ npm run server
 cd frontend
 npm start
 
-🧩 My Contributions
+# 🧩 My Contributions
 - Designed MongoDB schemas and Express routes for medication tracking.
 - Implemented backend logic for adherence metrics and streak consistency across dashboards.
 - Debugged integration issues (userId mismatches, badge color inconsistencies).
 - Refactored code for maintainability and scalability.
 - Focused on UI polish: centered calendar, reusable CSS, and professional layouts.
 
-📸 Demo Highlights
+# 📸 Demo Highlights
 - Patient Dashboard: shows streaks, adherence, and reminders.
 - Caretaker Dashboard: monitors multiple patients with real‑time updates.
 - Medication Calendar: clean, centered, and responsive.
 
-👩‍💻 Author
+# 👩‍💻 Author
 Developed by Bindu — aspiring full-stack developer passionate about building scalable, user-friendly healthcare solutions.
