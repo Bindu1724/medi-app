@@ -22,5 +22,8 @@ app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/medications', require('./routes/medicationRoutes'));
 app.use('/api/notifications', require('./routes/notificationRoutes'));
 app.use('/api/caretaker', require('./routes/settingRoutes'));
-app.listen(PORT, () => console.log("Server running on port " + PORT));
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 
