@@ -11,7 +11,7 @@ function RecentActivity({patientId}) {
     const fetchRecentActivity = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get(`https://medi-app-1ujt.onrender.com/medications/recent-activity/${patientId}`, {
+        const res = await axios.get(`https://medi-app-1ujt.onrender.com/api/medications/recent-activity/${patientId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setActivities(res.data || []);

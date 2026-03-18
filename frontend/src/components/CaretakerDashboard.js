@@ -23,12 +23,11 @@ function CaretakerView() {
   const [assignedPatientId, setAssignedPatientId] = useState("");
   const [medications, setMedications] = useState([]);
 
-
   // fetch patients
   const fetchPatients = useCallback(async () => {
     try {
       const res = await axios.get(
-        "https://medi-app-1ujt.onrender.com/users/patients",
+        "https://medi-app-1ujt.onrender.com/api/users/patients",
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setPatients(res.data);
@@ -42,7 +41,7 @@ function CaretakerView() {
   // fetch reports
  const fetchReports = useCallback(async (id) => {
   if (!id) return;
-  const res = await axios.get(`https://medi-app-1ujt.onrender.com/users/caretaker/reports/${id}`, {
+  const res = await axios.get(`https://medi-app-1ujt.onrender.com/api/users/caretaker/reports/${id}`, {
     headers: { Authorization: `Bearer ${token}` }
   });
   const data = res.data;
@@ -58,7 +57,7 @@ function CaretakerView() {
       try {
         if (assignedPatientId) {
           const res = await axios.get(
-            `https://medi-app-1ujt.onrender.com/medications?userId=${assignedPatientId}`,
+            `https://medi-app-1ujt.onrender.com/api/medications?userId=${assignedPatientId}`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           setMedications(res.data);
@@ -73,7 +72,7 @@ function CaretakerView() {
   // assign caretaker
   const assignCaretaker = async () => {
     try {
-      await axios.put("https://medi-app-1ujt.onrender.com/users/assign-caretaker",
+      await axios.put("https://medi-app-1ujt.onrender.com/api/users/assign-caretaker",
         { patientId, caretakerId: userId },
         { headers: { Authorization: `Bearer ${token}` } }
       );

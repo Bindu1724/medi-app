@@ -36,7 +36,7 @@ function Notification({ patientName, patientGender, adherenceRate, streak, medic
       reminderTime
     };
 
-    await axios.post("https://medi-app-1ujt.onrender.com/caretaker/notification-settings", payload);
+    await axios.post("https://medi-app-1ujt.onrender.com/api/caretaker/notification-settings", payload);
     alert("Settings saved successfully");
 
     // Reset individual states so UI clears

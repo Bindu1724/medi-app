@@ -1,5 +1,5 @@
 // src/services/api.js
-const API_BASE = "https://medi-app-1ujt.onrender.com"; // 
+const API_BASE = "https://medi-app-1ujt.onrender.com/api"; // 
 
 export async function apiRequest(endpoint, method = "POST", body = null, token = null) {
   const headers = { "Content-Type": "application/json" };

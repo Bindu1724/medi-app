@@ -5,8 +5,6 @@ import { FaCheckCircle, FaTimesCircle, FaClock } from "react-icons/fa";
 import "react-calendar/dist/Calendar.css"; // default styles
 
 
-
-
 function CalendarView({ patientId }) {
   const [date, setDate] = useState(new Date());
   const [medications, setMedications] = useState([]);
@@ -18,7 +16,7 @@ function CalendarView({ patientId }) {
       try {
         if (!patientId) return;
         const res = await axios.get(
-          `https://medi-app-1ujt.onrender.com/medications?userId=${patientId}`,
+          `https://medi-app-1ujt.onrender.com/api/medications?userId=${patientId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setMedications(res.data || []);

@@ -86,7 +86,7 @@ function PatientDashboard() {
     console.log("Clicked:", id);
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.put(`https://medi-app-1ujt.onrender.com/medications/${id}`, { userId: localStorage.getItem('userId'), status: 'taken' }, {
+      const res = await axios.put(`https://medi-app-1ujt.onrender.com/api/medications/${id}`, { userId: localStorage.getItem('userId'), status: 'taken' }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMedications(medications.map(m => m._id === id ? res.data : m));
@@ -99,7 +99,7 @@ function PatientDashboard() {
   useEffect(() => {
   async function fetchPatient() {
     try {
-      const res = await axios.get(`https://medi-app-1ujt.onrender.com/users/${userId}`, {
+      const res = await axios.get(`https://medi-app-1ujt.onrender.com/api/users/${userId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       console.log("Patient data:", res.data);

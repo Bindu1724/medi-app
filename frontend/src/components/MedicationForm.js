@@ -19,7 +19,7 @@ function MedicationForm({ onAdd }) {
     
 
     const res = await axios.post(
-      "https://medi-app-1ujt.onrender.com/medications",
+      "https://medi-app-1ujt.onrender.com/api/medications",
       {
         userId,
         name,
