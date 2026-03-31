@@ -2,7 +2,7 @@
 A full‑stack MERN application built to solve real‑world healthcare challenges: helping patients and caretakers track medication schedules, adherence, and reminders. This project demonstrates my ability to design, debug, and deliver production‑ready apps with polished UI and maintainable backend logic.
 
 # 🚀 Live Demo
-- Frontend (Netlify): https://subtle-kitten-219466.netlify.app (subtle-kitten-219466.netlify.app in Bing)
+- Frontend (Netlify):https://medication-tracker-app.netlify.app
 - Backend (Render): https://medi-app-1ujt.onrender.com 
 - API Base URL: https://medi-app-1ujt.onrender.com/api
 
